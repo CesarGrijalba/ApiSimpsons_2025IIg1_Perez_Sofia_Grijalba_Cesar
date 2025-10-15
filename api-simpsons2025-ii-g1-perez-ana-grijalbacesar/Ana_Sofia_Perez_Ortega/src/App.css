@@ -1,0 +1,11 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Added Simpson-themed font and smooth scrolling */
+body {
+  font-family: "Comic Sans MS", "Arial Rounded MT Bold", cursive, sans-serif;
+  scroll-behavior: smooth;
+}

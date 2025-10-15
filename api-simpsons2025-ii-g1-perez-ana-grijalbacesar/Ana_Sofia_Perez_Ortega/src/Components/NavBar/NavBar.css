@@ -1,0 +1,45 @@
+/* Improved navigation styling with Simpson theme */
+nav {
+  margin: 0.5rem 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+}
+
+nav a {
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+nav a:hover {
+  transform: scale(1.15) rotate(5deg);
+}
+
+nav button {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+nav button:hover {
+  background: rgba(255, 255, 255, 0.6);
+  border-color: #000;
+}
+
+@media (max-width: 768px) {
+  nav {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    gap: 1rem;
+  }
+}

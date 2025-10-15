@@ -1,0 +1,88 @@
+/* Complete redesign with Simpson-themed card style, better hover effects and responsiveness */
+.char-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 0 4px #ffd90f, 0 0 0 8px #000;
+  transition: all 0.3s ease;
+  position: relative;
+  max-width: 350px;
+  margin: 0 auto;
+  border: none;
+}
+
+.char-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 0 0 4px #ffd90f, 0 0 0 8px #000, 0 0 20px rgba(255, 217, 15, 0.5);
+}
+
+.char-card-img-container {
+  height: 320px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #87ceeb 0%, #b0e0e6 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 1rem;
+}
+
+.char-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+  filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.char-card:hover .char-card-img {
+  transform: scale(1.1);
+}
+
+.char-card-title {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #fff;
+  background: linear-gradient(135deg, #ffd90f 0%, #ffa500 100%);
+  text-align: center;
+  padding: 1rem;
+  margin: 0;
+  text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 3px solid #000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .char-card {
+    max-width: 100%;
+  }
+
+  .char-card-img-container {
+    height: 280px;
+  }
+
+  .char-card-title {
+    font-size: 1.1rem;
+    padding: 0.8rem;
+    min-height: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .char-card-img-container {
+    height: 250px;
+  }
+
+  .char-card-title {
+    font-size: 1rem;
+    padding: 0.7rem;
+    min-height: 60px;
+  }
+}

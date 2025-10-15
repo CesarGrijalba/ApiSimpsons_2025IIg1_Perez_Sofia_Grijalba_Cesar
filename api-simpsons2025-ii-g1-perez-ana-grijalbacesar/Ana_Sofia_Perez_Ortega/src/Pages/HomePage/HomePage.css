@@ -1,0 +1,316 @@
+/* Complete redesign with Simpson yellow theme, improved responsiveness and didactic elements */
+#home-page {
+  padding: 2rem 1rem;
+  background: linear-gradient(180deg, #87ceeb 0%, #b0e0e6 50%, #ffd90f 100%);
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#home-page h1 {
+  margin-bottom: 1.5rem;
+  font-size: clamp(2rem, 6vw, 4rem);
+  text-align: center;
+  color: #fff;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 4px 4px 8px rgba(0, 0, 0, 0.5);
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+#home-page h2 {
+  color: #fff;
+  text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+
+/* Carousel styling */
+.carousel-container {
+  margin-bottom: 3rem;
+  width: 100%;
+  max-width: 900px;
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-track {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 0 0 8px #ffd90f, 0 0 0 12px #000;
+}
+
+.carousel-track img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.carousel-track img:hover {
+  transform: scale(1.02);
+}
+
+/* Navigation links */
+.navigation-links {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  max-width: 900px;
+  width: 90%;
+  border: 4px solid #ffd90f;
+}
+
+.navigation-links h2 {
+  color: #000;
+  text-shadow: 2px 2px 0 #ffd90f;
+  margin-bottom: 1.5rem;
+}
+
+.navigation-links > div {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.navigation-links a {
+  padding: 1rem 2rem;
+  background: #ffd90f;
+  color: #000;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 900;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0 #000;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.navigation-links a:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #000;
+  background: #fff;
+}
+
+.navigation-links a:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #000;
+}
+
+/* Characters grid */
+#characters {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1400px;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+}
+
+#characters a {
+  display: block;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+#characters a:hover {
+  transform: translateY(-8px);
+}
+
+/* Loading state */
+#home-page > p {
+  font-size: 1.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 0 #000;
+  font-weight: bold;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+}
+
+/* Pagination controls */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0 3rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap;
+  border: 4px solid #ffd90f;
+  max-width: 900px;
+  width: 90%;
+}
+
+.pagination-btn {
+  padding: 0.8rem 1.5rem;
+  background: #ffd90f;
+  color: #000;
+  border: 3px solid #000;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 3px 3px 0 #000;
+  text-transform: uppercase;
+  font-family: "Comic Sans MS", cursive;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: #fff;
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 #000;
+}
+
+.pagination-btn:active:not(:disabled) {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0 #000;
+}
+
+.pagination-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  opacity: 0.5;
+  transform: none;
+}
+
+.page-info {
+  font-weight: 900;
+  color: #000;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 1.1rem;
+}
+
+.total-count {
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: 700;
+}
+
+.page-numbers {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.page-number-btn {
+  padding: 0.6rem 1rem;
+  background: #fff;
+  color: #000;
+  border: 3px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 900;
+  min-width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 0 #000;
+}
+
+.page-number-btn:hover {
+  background: #ffd90f;
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 #000;
+}
+
+.page-number-btn.active {
+  background: #ff6b9d;
+  color: #fff;
+  border-color: #000;
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.page-number-btn.active:hover {
+  background: #ff8cb4;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  #home-page {
+    padding: 1rem 0.5rem;
+  }
+
+  .carousel-track {
+    border-radius: 15px;
+  }
+
+  .carousel-track img {
+    max-height: 250px;
+  }
+
+  .navigation-links {
+    padding: 1.5rem 1rem;
+    width: 95%;
+  }
+
+  .navigation-links a {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  #characters {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .pagination-controls {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    width: 95%;
+  }
+
+  .page-numbers {
+    order: -1;
+  }
+
+  .page-number-btn {
+    min-width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navigation-links a {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  #characters {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
